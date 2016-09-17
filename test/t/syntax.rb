@@ -366,7 +366,7 @@ assert('External command execution.') do
     alias_method :old_cmd, sym
 
     results = []
-    define_method(sym) do |str|
+    Kernel.send(:define_method, sym) do |str|
       results.push str
       str
     end

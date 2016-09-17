@@ -70,28 +70,28 @@ assert('The undef statement', '13.3.7 a) 4)') do
 
   undef existing_method_a
   assert_raise(NoMethodError) do
-    existing_method_a
+    self.existing_method_a
   end
 
   undef :existing_method_b
   assert_raise(NoMethodError) do
-    existing_method_b
+    self.existing_method_b
   end
 
   undef existing_method_c, existing_method_d
   assert_raise(NoMethodError) do
-    existing_method_c
+    self.existing_method_c
   end
   assert_raise(NoMethodError) do
-    existing_method_d
+    self.existing_method_d
   end
 
   undef :existing_method_e, :existing_method_f
   assert_raise(NoMethodError) do
-    existing_method_e
+    self.existing_method_e
   end
   assert_raise(NoMethodError) do
-    existing_method_f
+    self.existing_method_f
   end
 end
 

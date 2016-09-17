@@ -677,7 +677,7 @@ end
       protected :foo
     end
     a = c.new
-    assert_true a.respond_to?(:foo), bug8005
+    assert_true a.respond_to?(:foo, true), bug8005
     assert_nothing_raised(NoMethodError, bug8005) {a.send :foo}
   end
 
